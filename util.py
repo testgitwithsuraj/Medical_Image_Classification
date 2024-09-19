@@ -1,5 +1,6 @@
 from PIL import Image, ImageOps
 import numpy as np
+import streamlit as st
 
 def classify(image, model, class_names):
     """
@@ -42,20 +43,16 @@ def classify(image, model, class_names):
 def set_background():
     """
     Sets the background for the Streamlit app.
-    This is a placeholder function and should be updated based on your specific needs.
+    Replace the URL with your actual background image URL.
     """
-    # Example code for setting a background image
-    import streamlit as st
-
     st.markdown(
         """
         <style>
         .reportview-container {
-            background: url("https://example.com/background.jpg");
+            background: url("https://example.com/background.jpg");  /* Update this URL */
             background-size: cover;
         }
         </style>
         """,
         unsafe_allow_html=True
     )
-
